@@ -1,0 +1,217 @@
+.note {
+  display: block;
+
+  max-width: 600px;
+  min-height: 800px;
+
+  margin: 0 auto;
+
+  margin-top: 40px;
+
+  transition: 0.2s all ease;
+
+  box-shadow: 0px 22px 100px 20px rgba(rgb(128, 128, 128), 0.15);
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #263238;
+
+    padding: 0 20px;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+
+      color: #fafafa;
+
+      cursor: pointer;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .copy {
+        margin-right: 20px;
+        cursor: pointer;
+
+        transform: translateY(2px);
+
+        transition: 0.1s all ease;
+
+        position: relative;
+
+        // &:after {
+        //   content: "Copied";
+
+        //   font-size: 20px;
+        //   font-weight: 500;
+        //   color: #fafafa;
+
+        //   opacity: 0;
+
+        //   font-family: Arial, Helvetica, sans-serif;
+
+        //   position: absolute;
+        //   top: -30px;
+        //   left: 50%;
+
+        //   transform: translateX(-50%);
+        // }
+
+        &:active {
+          transform: scale(1);
+        }
+      }
+
+      .save {
+        margin-right: 16px;
+
+        transform: translateY(2px);
+
+        transition: 0.1s all ease;
+
+        cursor: pointer;
+
+        &:active {
+          transform: scale(1);
+        }
+      }
+
+      .selectedColor {
+        width: 30px;
+        height: 30px;
+        position: relative;
+
+        background-color: #fff;
+
+        border-radius: 90px;
+
+        cursor: pointer;
+
+        div {
+          width: 22px;
+          height: 22px;
+
+          border-radius: 90px;
+
+          position: absolute;
+
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+
+          background: #fafafa;
+          border-radius: 90px;
+
+          position: absolute;
+
+          opacity: 0;
+
+          transition: 0.2s opacity ease;
+
+          top: 40px;
+          left: -1px;
+
+          li {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 90px;
+
+            background-color: #fafafa;
+
+            position: relative;
+
+            margin: 2px 1px;
+
+            cursor: pointer;
+
+            &:first-child {
+              margin-top: 2px;
+            }
+
+            &:last-child {
+              margin-bottom: 2px;
+            }
+
+            div {
+              width: 22px;
+              height: 22px;
+
+              border-radius: 90px;
+
+              position: absolute;
+
+              top: 50%;
+              left: 50%;
+
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    min-height: 500px;
+
+    padding: 30px 0px 0px 0px;
+
+    textarea {
+      display: block;
+
+      min-height: 750px;
+
+      width: 100%;
+
+      font-size: 48px;
+      font-weight: 400;
+
+      color: #424242;
+
+      background: none;
+      border: none;
+      outline: none;
+
+      padding: 0px 20px;
+
+      resize: none;
+
+      overflow: hidden;
+
+      caret-color: rgba($color: #000, $alpha: 0.3);
+
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
